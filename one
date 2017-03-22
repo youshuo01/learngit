@@ -1,3 +1,32 @@
-yuan yuan zui chou
-yuan yuan da sha
-bao bao zui ke ai
+git init  创建一个版本库
+git add   添加到仓库
+git commit  提交到版本库  －m "xxxx"
+git status  查看当前仓库状态
+git diff 比较版本差异
+git log  查看历史版本 --pretty=oneline  去掉多余输出信息  输出commit id 版本号 一串16进制数字
+git reset 回退到某一版本  --hard HEAD^（上一个版本 HEAD当前版本 HEAD^^上上个 HEAD~100 向上一百个）
+git reflog 记录每一次指令
+git checkout -- file 回退到编辑前
+git reset HEAD file  进入暂存区  回退到工作区
+git checkout -b 创建并切换分支
+git branch <name>  创建分支
+git checkout <name> 切换分支
+git branch 查看分支
+git merge <name>合并指定分支到当前分支
+git branch -d <name>删除分支
+git log --graph 查看分支合并图
+git branch -D <name> 强行删除没有被合并过的分支
+git push origin branch-name/<tagname>/tags  推送修改（把本地分支推送到远程）/标签／全部标签
+git pull 合并
+git remote -v； 查看远程库信息
+git checkout -b branch-name origin/branch-name  在本地创建和远程一样的分支
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支链接
+打标签 版本 比commit一串数字容易记录
+切换到需要打标签的分支 然后git tag <name> 打标签
+git tag 查看所有标签
+git tag -d '' 删除标签
+git push origin :refs/tags/vxxx  删除远程标签
+git config --global color.ui true 给git配置颜色
+git config --global alias.st status  把名称简写 用st代替status --global 全局参数
+配置文件 存放在 .git/config 中 要删除 只需删除alias下对应的行即可
+
