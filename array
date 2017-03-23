@@ -1,0 +1,45 @@
+js数组学习
+
+length获取数组长度 可以改变数组长度
+
+var arr = [1,2,3];
+arr[3] = 4;
+arr; // [1,2,3,undefined,4] 
+可以通过索引赋值
+
+indexof() 搜索指定一个元素的位置
+var arr = [a,b,c,’d’];
+arr.indexOf(a);   //索引值为0
+arr.indexOf(d);   // -1 不存在
+arr.indexOf(‘d’); //索引值为3
+
+slice 截取数组部分元素 返回一个新的数组
+eg：var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    arr.slice(0, 3);  // ['A', 'B', 'C']
+    arr.slice(3);     // ['D', 'E', 'F', 'G']
+若不填参数，即从头到位截取所有元素，实现简单克隆。
+注：数组是否相等不能通过简单的==或===判断（返回值为false）
+
+push和pop
+push()向数组末尾添加元素，pop()删除最后一个元素
+
+unshift和shift
+unshift()向数组头部添加元素，shift()删除数组第一个元素
+
+sort() 排序 默认按ASCII码顺序排序 可自定义
+reverse() 把数组逆序
+
+splice() 从指定索引开始删除若干元素，然后从该位置添加若干元素
+splice(索引几开始,删除几个元素,添加,添加,…)
+
+concat() 把数组链接起来并返回一个新数组
+eg:	var a = ['y','o','u'];
+	var a1 = ['s','h'];
+	var a2 = ['u','o'];
+	var add = a.concat(a1,a2);
+	console.log(add); // [“y”, "o", "u", "s", "h", "u", "o"]
+
+join() 把数组里的元素使用指定字符串连接起来
+eg:	var arr = ['you','bai','bai'];
+	arr.join(‘-‘); // you-bai-bai
+注：什么都不填默认样式为逗号
